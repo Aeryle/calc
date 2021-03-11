@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        h1 {
+            width: 60%;
+            margin: 10vh auto;
+            text-align: center;
+        }
+
+        #form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #form > label,
+        #submit {
+            margin-top: 10px;
+        }
+
+        #form > label {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        #submit {
+            width: 20%;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Calculator v2</h1>
+
+    <form action="" id="form">
+        <label>
+            First value
+            <input id="firstValue" placeholder="0" required step="any" type="number">
+        </label>
+
+        <label>
+            Operator
+            <input id="operator" maxlength="1" pattern="[+*-/%]" placeholder="+" required type="text">
+        </label>
+
+        <label>
+            Second value
+            <input id="secondValue" placeholder="0" required step="any" type="number">
+        </label>
+
+        <input id="submit" type="submit" value="Calculate">
+    </form>
+
+    <p class="center hide" id="divisionByZero">Can't divide by 0.</p>
+
+    <p class="center result" id="resultFunction">Result: </p>
+    <p class="center result" id="resultEval">Result: </p>
+    <p class="center result" id="resultHardcode">Result: </p>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
